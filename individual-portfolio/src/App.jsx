@@ -1,10 +1,15 @@
+import Header from './components/header'
+import Main from './components/main'
+import Footer from './components/footer'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <p>Hello world</p>
+      <Header></Header>
+      <Main></Main>
+      <Footer></Footer>
     </>
   )
 }
