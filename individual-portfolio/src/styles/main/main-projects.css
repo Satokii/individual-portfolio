@@ -6,11 +6,13 @@
     border-bottom: solid 5px rgba(128, 128, 128, 0.47);
 }
 
+/* PROJECT HEADER */
 .main-projects--header {
     font-size: 70px;
     text-decoration: underline 4px;
 }
 
+/* PROJECT CONTAINER */
 .main-projects--container {
     grid-auto-rows: auto;
     padding: 20px;
@@ -18,20 +20,20 @@
     border: solid 1px white;
 }
 
+/* INDIVIDUAL PROJECT DISPLAY */
 .main-projects--project {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    border: solid 2px red;
-    padding: 20px;
 }
 
+/* INFO */
 .project-info {
     grid-template-areas: 
     "header header"
     "description tech";
-    grid-template-rows: 50px 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 1fr 150px;
+    border-right: solid 1px rgba(245, 245, 245, 0.195);
+    padding: 10px;
 }
 
 .project-info--header {
@@ -41,16 +43,69 @@
 }
 
 .project-info--description {
+    grid-template-rows: 30px 1fr 40px;
+    gap: 10px;
     font-size: 18px;
-    border: solid 1px orange;
+    border-right: solid 1px rgba(255, 255, 255, 0.67);
     justify-items: center;
+    text-align: center;
+    padding: 10px 30px;
 }
 
+.project-info--description--link {
+    color: lightyellow;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.project-info--description--link:hover {
+    text-shadow: 1px 1px 4px green, 4px 4px 8px goldenrod, 0 0 15px green;
+    cursor: pointer;
+}
+
+/* TECH LIST */
 .project-info--tech {
+    grid-template-rows: 30px 1fr;
+    gap: 50px;
     justify-items: center;
-    border: solid 1px green;
+    padding: 10px;
 }
 
 .project-info--tech-header {
     font-size: 18px;
+    height: fit-content;
+}
+
+.project-info--tech-list {
+    list-style-type: '✅ ';
+    list-style-position: inside;
+}
+
+/* PROJECT IMAGE */
+.project-image--container {
+    grid-template-rows: 1fr 30px;
+    gap: 20px;
+    place-items: center;
+    padding: 20px;
+}
+
+.project-image--image {
+    border-radius: 20px;
+}
+
+/* GITHUB LINK */
+.project-image--github-link {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+.project-image--github-link:hover{
+    cursor: pointer;
+    background-color: rgb(30, 143, 255);
+    border-radius: 20px;
+    padding: 6px 14px;
+    width: 9vw;
 }
