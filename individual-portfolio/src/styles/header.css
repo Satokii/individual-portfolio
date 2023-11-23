@@ -1,9 +1,20 @@
 .header {
     grid-template-columns: 200px 1fr;
-    padding: 20px;
+    align-items: center;
+    height: 100px;
+    padding: 20px 40px;
     position: sticky;
     top: 0;
-    background-color: blue;
+    background-color: rgb(21, 21, 21);
+}
+
+.logo {
+    color: whitesmoke;
+}
+
+.logo:hover {
+    color: forestgreen;
+    cursor: default;
 }
 
 .header-nav {
@@ -11,6 +22,6 @@
 }
 
 .header-nav-list {
-    grid-template-columns: repeat(4, auto);
-    gap: 10px;
+    grid-template-columns: repeat(2, auto);
+    gap: 50px;
 }

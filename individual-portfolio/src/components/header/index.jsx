@@ -8,8 +8,6 @@ function Header() {
             <nav className='header-nav grid'>
                 <ul className='header-nav-list grid'>
                     <li>About Me</li>
-                    <li>Tech Stack</li>
-                    <li>Education/Experience</li>
                     <li>Projects</li>
                 </ul>
             </nav>
