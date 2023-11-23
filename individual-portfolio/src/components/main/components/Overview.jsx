@@ -1,4 +1,6 @@
 import ProfilePhoto from '../../../assets/profile-photo.jpg'
+import PointLeft from '../../../assets/point-left.svg'
+import PointRight from '../../../assets/point-right.svg'
 import '../../../styles/main/overview.css'
 
 function Overview() {
@@ -21,7 +23,15 @@ function Overview() {
                     <img className='profile-photo grid' src={ProfilePhoto} alt="profile photo" width={400} />
                 </div>
                 <div className='overview-text-container grid'>
-                    <p className='overview-text'>Hi, my name is Satoki. <br /> I am a student on the Boolean Software Development bootcamp, currently working towards becoming a Full-Stack Developer.</p>
+                    <p className='overview-text'>
+                        Hi, my name is Satoki. <br /> I am a student on the Boolean Software Development bootcamp, currently working towards becoming a Full-Stack Developer.
+                    </p>
+                    <a className='see-work-below grid' href='#projects'>
+                        <img className='point-hand' src={PointLeft} alt="point down left" width={30} />
+                        <p>Have a look at some of my creations below!</p>
+                        <img className='point-hand' src={PointRight} alt="point down right" width={30} />
+                    </a>
+                    
                 </div>
             </div>
         </section>
