@@ -12,6 +12,10 @@ function MainAboutMe() {
 
     const navigate = useNavigate()
 
+    function jumpToTop() {
+        window.scrollTo(0, 0)
+    }
+
     const INITIAL_STATE = {
         name: '',
         className: ''
@@ -29,9 +33,9 @@ function MainAboutMe() {
     }
 
     return (
-        <section id='about-me' className='about-me grid'>
-            <h2 className='about-me-header'>About Me</h2>
-            <p>I have learnt a range of skills in my journey so far. I have experience working with:</p>
+        <section id='about-me' className='main-about-me grid'>
+            <h2 className='main-about-me-header'>About Me</h2>
+            <p className='main-about-me-text grid'>I have learnt a range of skills in my journey so far. I have experience working with:</p>
             <div onMouseOut={removeText} className='tech-stack-logos grid'>
                 <img className='js-logo' name='JavaScript' onMouseOver={toggleText}  src={JSLogo} alt="js logo" width={200} />
                 <img className='html-logo' name='HTML' onMouseOver={toggleText}  src={HTMLLogo} alt="html logo" width={200}/>
@@ -42,8 +46,10 @@ function MainAboutMe() {
             <div className='tech-stack-text grid'>
                 <p className={showTechStackText.className}>{showTechStackText.name}</p>
             </div>
-            <p onClick={() => navigate('/about-me')}>Click here to read more about me</p>
-            <p>Have a look at some of my work below:</p>
+            <p className='more-about-me grid' onClick={() => {
+                navigate('/about-me')
+                jumpToTop()
+            }}>Click here to read more about me.</p>
         </section>
     )
 }

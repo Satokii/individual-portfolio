@@ -4,7 +4,7 @@ function Projects() {
 
     return (
         <section className="projects-container grid">
-            <h2>🚧🚧👷🚧🚧 Currently under construction 🚧🚧👷🚧🚧</h2>
+            <h2>🚧🚧👷🚧🚧 Projects still under construction 🚧🚧👷🚧🚧</h2>
         </section>
     )
 }

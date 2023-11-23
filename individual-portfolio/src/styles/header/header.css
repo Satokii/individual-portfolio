@@ -14,8 +14,8 @@
 }
 
 .logo:hover {
-    color: darkgoldenrod;
-    cursor: default;
+    text-shadow: 1px 1px 4px darkgoldenrod, 2px 2px 3px goldenrod, 0 0 7px darkgoldenrod;
+    cursor: pointer;
 }
 
 .header-nav {
@@ -23,6 +23,22 @@
 }
 
 .header-nav-list {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     gap: 50px;
+    font-size: 24px;
+}
+
+.header-home:hover {
+    text-shadow: 2px 2px 5px dodgerblue, 2px 2px 7px blue, 0 0 10px darkblue;
+    cursor: pointer;
+}
+
+.header-about-me:hover {
+    text-shadow: 2px 2px 5px green, 2px 2px 7px green, 0 0 10px greenyellow;
+    cursor: pointer;
+}
+
+.header-projects:hover {
+    text-shadow: 2px 2px 5px red, 2px 2px 7px red, 0 0 10px darkred;
+    cursor: pointer;
 }
