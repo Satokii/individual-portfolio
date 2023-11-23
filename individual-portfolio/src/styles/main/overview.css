@@ -1,0 +1,122 @@
+/* OVERVIEW */
+.overview {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 200px;
+    height: 100vh;
+    border-bottom: solid 5px rgba(128, 128, 128, 0.47);
+}
+
+.overview > div {
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.overview-left {
+    border-right: solid 1px rgba(128, 128, 128, 0.47);
+    padding: 20px 50px;
+}
+
+.overview-right {
+    padding: 20px 50px;
+}
+
+/* OVERVIEW HEADER */
+.overview-header-container {
+    grid-template-rows: repeat(2, auto);
+    gap: 16px;
+}
+
+.overview-header {
+    font-size: 90px;
+    align-items: end;
+}
+
+.overview-job-header {
+    font-size: 40px;
+    text-shadow: goldenrod 1px 0 14px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+}
+
+/* OVERVIEW PROFILE PHOTO */
+.profile-photo-container {
+    background-color: #E9F1F1;
+    align-self: center;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.profile-photo {
+    place-self: center;
+    border-radius: 10px;
+}
+
+/* OVERVIEW QUICK LINKS */
+.overview-quick-links {
+    grid-auto-rows: auto;
+    gap: 25px;
+    align-content: start;
+    margin-top: 90px;
+    margin-left: 10px;
+    color: white;
+}
+
+.quick-links-header {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.overview-quick-links > a {
+    justify-content: center;
+    width: 150px;
+    border: solid 1px white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 1.5s, border-color 0.7s, text-shadow 0.7s, box-shadow 0.8s, transform 1s, margin-left 2s;
+
+}
+
+.overview-quick-links > a:hover {
+    color: lightyellow;
+    border-color: darkgoldenrod red red goldenrod;
+    text-shadow: 2px 2px 4px red, 1px 1px 2px goldenrod, 0 0 10px goldenrod;
+    box-shadow: 1px 1px 2px red, -1px -1px 2px goldenrod, 0 0 10px goldenrod;
+    transform: scale(1.2);
+    margin-left: 80px;
+    transition-timing-function: ease;
+}
+
+
+/* OVERVIEW TEXT */
+.overview-text-container {
+    margin-top: 80px;
+    max-width: 500px;
+}
+
+.overview-text {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1420px) {
+    .overview {
+        padding: 20px 100px;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .overview {
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .overview-left, .overview-right {
+        padding: 20px 10px;
+    }
+
+    .overview-quick-links, .overview-text-container {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

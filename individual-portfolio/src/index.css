@@ -13,6 +13,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -41,8 +42,8 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  text-decoration: none;
   color: currentColor;
 }
 
