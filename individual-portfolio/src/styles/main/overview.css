@@ -118,6 +118,7 @@
     justify-self: center;
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 1420px) {
     .overview {
         padding: 20px 100px;
