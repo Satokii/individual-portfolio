@@ -6,18 +6,26 @@ import ReactLogo from '../../assets/tech-stack-logos/react-logo.svg'
 import GitLogo from '../../assets/tech-stack-logos/git-logo.svg'
 import '../../styles/main/main.css'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Main() {
 
-    const [showTechStackText, setShowTechStackText] = useState(null)
+    const navigate = useNavigate()
+
+    const INITIAL_STATE = {
+        name: '',
+        className: ''
+    }
+
+    const [showTechStackText, setShowTechStackText] = useState(INITIAL_STATE)
 
     function removeText() {
-        setShowTechStackText(null)
+        setShowTechStackText(INITIAL_STATE)
     }
 
     function toggleText(e) {
-        const { name } = e.target
-        setShowTechStackText(name)
+        const { name, className } = e.target
+        setShowTechStackText({name: name, className: className})
     }
 
     return (
@@ -34,8 +42,9 @@ function Main() {
                     <img className='react-logo' name='React' onMouseOver={toggleText}  src={ReactLogo} alt="react logo" width={200} />
                 </div>
                 <div className='tech-stack-text grid'>
-                    {showTechStackText}
+                    <p className={showTechStackText.className}>{showTechStackText.name}</p>
                 </div>
+                <p onClick={() => navigate('/about-me')}>Click here to read more about me</p>
                 <p>Have a look at some of my work below:</p>
             </section>
             <section id='projects' className='projects'>
