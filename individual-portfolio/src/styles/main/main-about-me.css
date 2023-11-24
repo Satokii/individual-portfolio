@@ -1,6 +1,6 @@
 /* MAIN - ABOUT ME */
 .main-about-me {
-    grid-template-rows: 100px 50px 1fr 50px;
+    grid-template-rows: 100px 50px 1fr 60px 50px;
     gap: 20px;
     padding: 110px 150px 50px 150px;
     height: 100%;
@@ -16,6 +16,7 @@
 /* ABOUT ME TEXT */
 .main-about-me-text {
     place-self: center;
+    font-size: 22px;
 }
 
 /* SKILLS - TECH STACK IMAGES */
@@ -25,7 +26,7 @@
     width: auto;
     gap: 10px;
     place-items: center;
-    border: solid 2px lightgoldenrodyellow;
+    box-shadow: 1px 1px 6px darkgreen, 0 0 2px darkgreen, 0 0 15px white;
     padding: 20px 30px;
 }
 
@@ -57,7 +58,7 @@
 /* SKILLS - TECH STACK TEXT */
 .tech-stack-text {
     place-items: center;
-    font-size: 40px;
+    font-size: 56px;
     font-weight: bold;
     color: white;
 }
@@ -86,11 +87,12 @@
 
 /* MORE ABOUT ME */
 .more-about-me {
-    font-size: 20px;
+    font-size: 30px;
     place-self: center;
+    text-decoration: underline;
 }
 .more-about-me:hover {
-    text-shadow: 2px 2px 4px goldenrod, 1px 1px 10px goldenrod;
+    text-shadow: 2px 2px 4px darkgreen, 1px 1px 10px darkgreen;
     cursor: pointer;
 }
 

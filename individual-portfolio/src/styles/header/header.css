@@ -29,7 +29,9 @@
 }
 
 .header-home:hover {
-    text-shadow: 2px 2px 5px dodgerblue, 2px 2px 7px blue, 0 0 10px darkblue;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px red, 2px 2px 7px red, 0 0 10px darkred;
     cursor: pointer;
 }
 
@@ -39,6 +41,6 @@
 }
 
 .header-projects:hover {
-    text-shadow: 2px 2px 5px red, 2px 2px 7px red, 0 0 10px darkred;
+    text-shadow: 2px 2px 5px dodgerblue, 2px 2px 7px blue, 0 0 10px darkblue;
     cursor: pointer;
 }

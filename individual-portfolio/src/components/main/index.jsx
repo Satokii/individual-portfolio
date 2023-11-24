@@ -10,7 +10,6 @@ function Main() {
             <Overview></Overview>
             <MainAboutMe />
             <MainProjects />
-            
         </main>
     )
 }

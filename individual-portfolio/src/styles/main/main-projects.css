@@ -27,7 +27,7 @@
     grid-template-areas: 
     "header header"
     "left right";
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 70px 1fr;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 0;
     border-bottom: solid 2px rgba(255, 255, 255, 0.67);
@@ -38,15 +38,24 @@
     grid-area: header;
     font-size: 26px;
     align-self: center;
-    text-underline-offset: 10px;
-    padding: 20px 10px;
-    margin: 0 30px;
+    padding: 20px 20px;
+    margin: 0 30px 10px 30px;
     box-shadow: 1px 1px 3px cyan, 0 0 15px blue, 0 0 10px green;
     transition: 0.6s;
 }
 
+.left-header {
+    justify-content: start;
+}
+
+.right-header {
+    justify-content: end;
+}
+
 .project-info--header:hover {
     box-shadow: 1px 1px 10px white, 1px 1px 15px cyan, 0 0 20px white;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .project-info:nth-child(odd) {
@@ -63,20 +72,23 @@
 .project-info--description {
     grid-template-rows: 30px 1fr 40px;
     gap: 10px;
-    font-size: 18px;
+    font-size: 20px;
     justify-items: center;
     text-align: center;
     padding: 10px 30px;
 }
 
 .project-info--description--link {
-    color: lightyellow;
+    color: rgba(30, 143, 255, 0.785);
+    text-decoration: underline;
     font-weight: bold;
     padding-top: 20px;
 }
 
 .project-info--description--link:hover {
-    text-shadow: 1px 1px 4px green, 4px 4px 8px goldenrod, 0 0 15px green;
+    color: white;
+    text-shadow: 1px 1px 4px blue, 4px 4px 8px blue, 0 0 15px cyan;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -115,22 +127,63 @@
 }
 
 .project-image--image:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 /* GITHUB LINK */
-.project-image--github-link {
-    grid-template-columns: 1fr auto;
+.project-image--github-link-container {
+    grid-template-columns: repeat(2, auto);
+    place-items: center;
     gap: 10px;
-    align-items: center;
-    font-weight: bold;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
-.project-image--github-link:hover{
+.project-image--github-link {
+    font-weight: bold;
+}
+
+.project-image--github-link-container:hover{
     cursor: pointer;
     background-color: rgb(30, 143, 255);
     border-radius: 20px;
-    padding: 6px 14px;
-    width: 9vw;
+    padding: 6px 20px;
+}
+
+.project-image--github-link-container:hover .github-link-logo {
+    animation: 1.8s linear 0s infinite alternate slide-right;
+}
+
+.project-image--github-link-container:hover .project-image--github-link {
+    animation: 1.8s linear 0s infinite alternate slide-left;
+}
+
+@keyframes slide-right {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(10px);
+    }
+  }
+  
+  @keyframes slide-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-10px);
+    }
+  }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1420px) {
+    .main-projects {
+        padding: 110px 100px 50px 100px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main-projects {
+        padding: 110px 20px 50px 20px;
+    }
 }

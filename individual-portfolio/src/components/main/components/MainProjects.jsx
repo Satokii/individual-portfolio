@@ -11,7 +11,7 @@ function MainProjects() {
             <h2 className='main-projects--header'>Projects</h2>
             <div className='main-projects--container grid'>
                 <article className='main-projects--project grid'>
-                    <h3 className='project-info--header'>Social Media Post Feed Dashboard</h3>
+                    <h3 className='project-info--header left-header grid'>Social Media Post Feed Dashboard</h3>
                     <section className='project-info grid'>
                         <div className='project-info--description grid'>
                             <h4>Description</h4>
@@ -32,21 +32,26 @@ function MainProjects() {
                     </section>
                     <div className='project-image--container grid'>
                         <img className='project-image--image' src={DashboardMain} alt="dashboard project main photo"/>
-                        <a className='project-image--github-link grid' target='_blank' href="https://github.com/Satokii/react-cohort-dashboard-challenge" rel="noreferrer">
-                            Github Link
-                            <img src={GithubLogo} alt="github logo" width={20} />
-                        </a>
+                        <div className='project-image--github-link-container grid'>
+                            <a className='project-image--github-link grid' target='_blank' href="https://github.com/Satokii/react-cohort-dashboard-challenge" rel="noreferrer">
+                                Github Link
+                            </a>
+                            <img className='github-link-logo' src={GithubLogo} alt="github logo" width={20} />
+                        </div>
+                        
                     </div>
                 </article>
                 {/* NEXT PROJECT */}
                 <article className='main-projects--project grid'>
-                    <h3 className='project-info--header'>Placeholder Project</h3>
+                    <h3 className='project-info--header right-header grid'>Placeholder Project</h3>
                     <div className='project-image--container grid'>
-                        <img className='project-image--image' src={Placeholder} alt="placeholder" width={500}/>
-                        <a className='project-image--github-link grid' target='_blank' href="#" rel="noreferrer">
-                            Github Link
-                            <img src={GithubLogo} alt="github logo" width={20} />
-                        </a>
+                        <img className='project-image--image' src={Placeholder} alt="placeholder" width={600}/>
+                        <div className='project-image--github-link-container grid'>
+                            <a className='project-image--github-link grid' target='_blank' href="#" rel="noreferrer">
+                                Github Link
+                            </a>
+                            <img className='github-link-logo' src={GithubLogo} alt="github logo" width={20} />
+                        </div>
                     </div>
                     <section className='project-info grid'>
                         <div className='project-info--tech grid'>
@@ -69,11 +74,11 @@ function MainProjects() {
                 </article>
                 {/* NEXT PROJECT */}
                 <article className='main-projects--project grid'>
-                    <h3 className='project-info--header'>Work in progress!</h3>
+                    <h3 className='project-info--header left-header grid'>Work in progress!</h3>
                     <section className='project-info grid'>
                         <div className='project-info--description grid'>
                             <h4>Description</h4>
-                            <p>Work is still under construction. Please visit again later.</p>
+                            <p>🛠️ Work is still under construction. Please check back again later 🛠️</p>
                             <p className='project-info--description--link'>Click here to view more about this app!</p>
                         </div>
                         <div className='project-info--tech grid'>
@@ -87,11 +92,14 @@ function MainProjects() {
                         </div>
                     </section>
                     <div className='project-image--container grid'>
-                        <img className='project-image--image' src={WorkInProgress} alt="under construction" width={400}/>
-                        <a className='project-image--github-link grid' target='_blank' href="#" rel="noreferrer">
-                            Github Link
-                            <img src={GithubLogo} alt="github logo" width={20} />
-                        </a>
+                        <img className='project-image--image' src={WorkInProgress} alt="under construction" width={500}/>
+                        <div className='project-image--github-link-container grid'>
+                            <a className='project-image--github-link grid' target='_blank' href="#" rel="noreferrer">
+                                Github Link
+                            </a>
+                            <img className='github-link-logo' src={GithubLogo} alt="github logo" width={20} />
+                        </div>
+                        
                     </div>
                 </article>
             </div>
